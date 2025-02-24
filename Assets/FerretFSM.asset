@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f945e777233a59f4aba40aeca29093a6, type: 3}
+  m_Name: FerretFSM
+  m_EditorClassIdentifier: 
+  _serializedGraph: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"waitTime":{"_value":2.0},"$type":"NodeCanvas.Tasks.Actions.Wait"},{"log":{"_value":"Idle
+    States"},"$type":"NodeCanvas.Tasks.Actions.DebugLogText"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Idle","_position":{"x":131.2866,"y":97.52004},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"log":{"_value":"Walking"},"$type":"NodeCanvas.Tasks.Actions.DebugLogText"},{"speed":{"_value":4.0},"keepDistance":{"_value":0.1},"minWanderDistance":{"_value":5.0},"maxWanderDistance":{"_value":20.0},"$type":"NodeCanvas.Tasks.Actions.Wander"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Walk","_position":{"x":334.7192,"y":237.6876},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[{"log":{"_value":"Eating"},"$type":"NodeCanvas.Tasks.Actions.DebugLogText"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Eat","_position":{"x":502.3013,"y":404.5561},"$type":"NodeCanvas.StateMachines.ActionState","$id":"2"},{"_nestedFSM":{"_value":1},"_name":"Play","_position":{"x":848.166,"y":486.5839},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"3"},{"_actionList":{"executionMode":1,"actions":[{"log":{"_value":"Sleeping"},"$type":"NodeCanvas.Tasks.Actions.DebugLogText"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"sleep","_position":{"x":471.7712,"y":746.788},"$type":"NodeCanvas.StateMachines.ActionState","$id":"4"}],"connections":[{"_condition":{"timeout":{"_value":3.0},"$type":"NodeCanvas.Tasks.Conditions.Timeout"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"specifiedTagOnly":true,"objectTag":"Vegetable","saveGameObjectAs":{"_name":""},"$type":"NodeCanvas.Tasks.Conditions.CheckTrigger_Transform"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"specifiedTagOnly":true,"objectTag":"Player","saveGameObjectAs":{"_name":""},"$type":"NodeCanvas.Tasks.Conditions.CheckTrigger_Transform"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"timeout":{"_value":7.0},"$type":"NodeCanvas.Tasks.Conditions.Timeout"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"timeout":{"_value":1.0},"$type":"NodeCanvas.Tasks.Conditions.Timeout"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"timeout":{"_value":5.0},"$type":"NodeCanvas.Tasks.Conditions.Timeout"},"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"4"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"timeout":{"_value":5.0},"$type":"NodeCanvas.Tasks.Conditions.Timeout"},"_sourceNode":{"$ref":"4"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _objectReferences:
+  - {fileID: 0}
+  - {fileID: 11400000, guid: a2c2369bd4adf6e45a61aae544923c53, type: 2}
+  _graphSource:
+    _version: 3.31
+    _category: 
+    _comments: 
+    _translation: {x: 164.91043, y: 65.24702}
+    _zoomFactor: 0.5803477
+  _haltSerialization: 0
+  _externalSerializationFile: {fileID: 0}
